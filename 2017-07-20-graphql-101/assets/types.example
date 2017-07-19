@@ -60,7 +60,13 @@ union SearchResult = Human | Hero
 
 # Input types
 
-input FilterInput {
-  alias: String
-  movieName: String
+input HeroInput {
+  name: String
+  description: String
+}
+
+# Mutation type
+
+type Mutation {
+  createHero(input: HeroInput): Hero
 }

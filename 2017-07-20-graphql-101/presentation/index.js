@@ -108,7 +108,8 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/types.example")}
           ranges={[
-            { loc: [0, 3], title: "Special query type" },
+            { loc: [0, 0], title: "Type system" },
+            { loc: [0, 3], title: "Query type" },
             { loc: [1, 2] },
             { loc: [6, 11], title: "Object type" },
             { loc: [7, 8] },
@@ -119,8 +120,9 @@ export default class Presentation extends React.Component {
             { loc: [34, 38], title: "Enum types" },
             { loc: [41, 46], title: "Interface types" },
             { loc: [47, 54] },
-            { loc: [58, 59], title: "Union types"},
-            { loc: [62, 66], title: "Input types" }
+            { loc: [58, 59], title: "Union types" },
+            { loc: [62, 66], title: "Input types" },
+            { loc: [69, 72], title: "Mutation type" }
           ]}
         />
       </Deck>
