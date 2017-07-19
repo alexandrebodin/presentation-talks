@@ -1,0 +1,25 @@
+# Query type is a specific type representing the root fields that can be queried
+
+type Query {
+  heroes: [Hero]
+}
+
+# Object and fields
+
+type Hero {
+  id: ID!
+  name: String
+  description: String
+}
+
+# Arguments
+
+type Hero {
+  id: ID!
+  movies(count: Int): [Movie]
+}
+
+type Movie {
+  title: String
+}
+

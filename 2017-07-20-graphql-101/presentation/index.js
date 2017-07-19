@@ -12,8 +12,12 @@ import {
   Quote,
   Image,
   Slide,
-  Text
+  Text,
+  CodePane,
+  Layout,
+  Fill
 } from "spectacle";
+import CodeSlide from 'spectacle-code-slide';
 
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
@@ -28,9 +32,7 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   logo: require("../assets/logo.png"),
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  markdown: require("../assets/markdown.png")
+  unicorn: require("../assets/unicorn.jpg")
 };
 
 preloader(images);
@@ -57,24 +59,62 @@ export default class Presentation extends React.Component {
             </Heading>
           </div>
         </Slide>
-        <Slide bgColor="secondary" textColor="primary">
-          GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data
+        <Slide bgColor="secondary">
+          <Text textColor="primary" textSize={30} margin="20px auto">GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.</Text>
+          <Text textColor="primary" textSize={30}>It was created by Facebook in 2012.</Text>
         </Slide>
         <Slide bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+          <Heading size={6} textColor="secondary" caps>What GraphQL isn't</Heading>
+          <List style={{ lineHeight: 2 }}>
+            <ListItem>A Javascript framework</ListItem>
+            <ListItem>A REST subset</ListItem>
+            <ListItem>A database</ListItem>
+            <ListItem>A unicorn <Image style={{ verticalAlign: "text-bottom" }} width="90" src={images.unicorn.replace("/", "")} /></ListItem>
           </List>
         </Slide>
-        <Slide bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="tertiary" caps>What is it ?</Heading>
         </Slide>
+        <Slide bgColor="primary" textColor="tertiary">
+          <Layout>
+            <Fill style={{ margin: 10 }}>
+              Queries
+              <CodePane
+                lang="graphql"
+                source={require("raw-loader!../assets/first_query.example")}
+              />
+            </Fill>
+            <Fill style={{ margin: 10 }}>
+              A Schema
+              <CodePane
+                lang="graphql"
+                source={require("raw-loader!../assets/first_types.example")}
+              />
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Why a Type System</Heading>
+          <List style={{ lineHeight: 2 }}>
+            <ListItem textSize={24}>Query parsing</ListItem>
+            <ListItem textSize={24}>Query validation</ListItem>
+            <ListItem textSize={24}>Documentation</ListItem>
+            <ListItem textSize={24}>Completion</ListItem>
+            <ListItem textSize={24}>Great Developer Experience</ListItem>
+          </List>
+        </Slide>
+        <CodeSlide
+          transition={[]}
+          lang="js"
+          code={require("raw-loader!../assets/types.example")}
+          ranges={[
+            { loc: [0, 1], title: "Walking through some code" },
+            { loc: [0, 1], title: "The Beginning" },
+            { loc: [1, 2] },
+            { loc: [1, 2], note: "Heres a note!" },
+            { loc: [2, 3] },
+            { loc: [8, 10] }]}
+        />
       </Deck>
     );
   }
