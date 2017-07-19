@@ -108,12 +108,20 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/types.example")}
           ranges={[
-            { loc: [0, 1], title: "Walking through some code" },
-            { loc: [0, 1], title: "The Beginning" },
+            { loc: [0, 3], title: "Special query type" },
             { loc: [1, 2] },
-            { loc: [1, 2], note: "Heres a note!" },
-            { loc: [2, 3] },
-            { loc: [8, 10] }]}
+            { loc: [6, 11], title: "Object type" },
+            { loc: [7, 8] },
+            { loc: [14, 18], title: "Arguments" },
+            { loc: [16, 17] },
+            { loc: [19, 22] },
+            { loc: [26, 31], title: "Sclar types" },
+            { loc: [34, 38], title: "Enum types" },
+            { loc: [41, 46], title: "Interface types" },
+            { loc: [47, 54] },
+            { loc: [58, 59], title: "Union types"},
+            { loc: [62, 66], title: "Input types" }
+          ]}
         />
       </Deck>
     );

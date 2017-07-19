@@ -1,5 +1,3 @@
-# Query type is a specific type representing the root fields that can be queried
-
 type Query {
   heroes: [Hero]
 }
@@ -23,3 +21,46 @@ type Movie {
   title: String
 }
 
+
+# Scalar Types
+
+Int
+String
+Float
+Boolean
+ID
+
+# Enumeration
+
+enum Publisher {
+  MARVEL
+  DC
+}
+
+# Interfaces
+
+interface Character {
+  id: ID!
+  name: String!
+  movies: [Movie]!
+}
+
+type Hero implements Charachter {
+  id: ID!
+  name: String!
+  movies: [Movie]!
+  power: String!
+  alias: String!
+}
+
+
+# Union types
+
+union SearchResult = Human | Hero
+
+# Input types
+
+input FilterInput {
+  alias: String
+  movieName: String
+}
