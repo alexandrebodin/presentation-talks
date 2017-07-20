@@ -1,0 +1,20 @@
+{
+  "data": {
+    "dcHeroes": [
+      {
+        "name": "Superman"
+      },
+      {
+        "name": "Batman"
+      }
+    ],
+    "marvelHeroes": [
+      {
+        "name": "Ironman"
+      },
+      {
+        "name": "Captain America"
+      }
+    ]
+  }
+}

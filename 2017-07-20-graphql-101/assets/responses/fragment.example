@@ -1,0 +1,33 @@
+{
+  "data": {
+    "dcHeroes": [
+      {
+        "name": "Superman",
+        "dateOfBirth": "01-01-0001",
+        "movies": [{
+          "name": "Man of steel"
+        }]
+      },
+      {
+        "name": "Batman",
+        "dateOfBirth": "01-01-0001",
+        "movies": [{
+          "name": "The dark knight"
+      }
+    ],
+    "marvelHeroes": [
+      {
+        "name": "Ironman",
+        "dateOfBirth": "01-01-0001",
+        "movies": [{
+          "name": "Iron Man"
+      },
+      {
+        "name": "Captain America",
+        "dateOfBirth": "01-01-0001",
+        "movies": [{
+          "name": "Civil War"
+      }
+    ]
+  }
+}

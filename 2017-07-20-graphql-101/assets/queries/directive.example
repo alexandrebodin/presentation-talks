@@ -1,0 +1,14 @@
+query OneHero($id: ID!, $withMovies: Boolean = false) {
+  heroe(id: $id) {
+    name
+    movies @include(if: $withMovies) {
+      name
+    }
+  }
+}
+
+# variables
+{
+  "id": 1,
+  "withMovies": true
+}

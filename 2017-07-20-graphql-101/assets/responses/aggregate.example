@@ -1,0 +1,15 @@
+{
+  "data": {
+    "hero": {
+      "name": "Spiderman",
+      "movies": [
+        {
+          name: "Spiderman homecoming"
+        },
+        {
+          name: "The amazing Spiderman"
+        }
+      ]
+    }
+  }
+}

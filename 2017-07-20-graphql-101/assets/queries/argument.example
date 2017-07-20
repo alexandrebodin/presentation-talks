@@ -1,0 +1,7 @@
+{
+  hero(id: 1) {
+    name
+    dateOfBirth(format: "DD-MM-YYYY")
+    movies(count: TOP)
+  }
+}

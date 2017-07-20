@@ -1,0 +1,30 @@
+{
+  "data": {
+    "__type": {
+      "name": "Droid",
+      "fields": [
+        {
+          "name": "id",
+          "type": {
+            "name": null,
+            "kind": "NON_NULL"
+          }
+        },
+        {
+          "name": "name",
+          "type": {
+            "name": null,
+            "kind": "NON_NULL"
+          }
+        },
+        {
+          "name": "friends",
+          "type": {
+            "name": null,
+            "kind": "LIST"
+          }
+        }
+      ]
+    }
+  }
+}

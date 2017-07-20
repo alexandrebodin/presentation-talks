@@ -1,0 +1,21 @@
+{
+  "data": {
+    "hero": {
+      "name": "Iron Man",
+      "movies": [
+        {
+          "name": "Iron Man"
+        },
+        {
+          "name": "Iron Man 2"
+        },
+        {
+          "name": "Iron Man 3"
+        },
+        {
+          "name": "Avengers"
+        }
+      ]
+    }
+  }
+}

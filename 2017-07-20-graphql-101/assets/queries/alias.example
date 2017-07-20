@@ -1,0 +1,8 @@
+{
+  dcHeroes: heroes(type: DC) {
+    name
+  }
+  marvelHeroes: heroes(type: MARVEL) {
+    name
+  }
+}

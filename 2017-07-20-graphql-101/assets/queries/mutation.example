@@ -1,0 +1,14 @@
+mutate CreateHero($hero: HeroInput) {
+  createHero($hero) {
+    id
+    name
+  }
+}
+
+# variables 
+
+{
+  "hero": {
+    "name": "My hero"
+  }
+}

@@ -1,0 +1,11 @@
+query PublisherHeroes($publisher: Publisher = MARVEL) {
+  heroes(publisher: $publisher) {
+    name
+  }
+}
+
+# variables
+
+{
+  "publisher": "MARVEL"
+}

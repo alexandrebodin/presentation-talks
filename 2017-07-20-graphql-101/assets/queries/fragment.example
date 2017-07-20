@@ -1,0 +1,16 @@
+{
+  dcHeroes: heroes(type: DC) {
+    ...fields
+  }
+  marvelHeroes: heroes(type: MARVEL) {
+    ...fields
+  }
+}
+
+fragment fields on Hero {
+  name
+  dateOfBirth(format: 'DD-MM-YYYY')
+  movies {
+    name
+  }
+}

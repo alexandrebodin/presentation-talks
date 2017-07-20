@@ -1,0 +1,11 @@
+{
+  "data": {
+    "hero": {
+      "name": "Spiderman",
+      "dateOfBirth": "01-08-1962",
+      "movies": [{
+        "name": "SPIDER-MAN"
+      }]
+    }
+  }
+}
