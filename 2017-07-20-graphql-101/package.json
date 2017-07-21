@@ -2,13 +2,14 @@
   "name": "spectacle-boilerplate",
   "version": "1.0.1",
   "description": "ReactJS Powered Presentation Framework",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx presentation/**/*.js",
     "deploy": "npm run clean & npm run build && surge -p .",
-    "start": "cross-env NODE_ENV=development node server.js"
+    "dev": "cross-env NODE_ENV=development node server.js",
+    "start": "serve ./ --single"
   },
   "author": "",
   "license": "MIT",
@@ -16,6 +17,7 @@
     "normalize.css": "3.0.3",
     "react": "15.4.2",
     "react-dom": "15.4.2",
+    "serve": "6.0.2",
     "spectacle": "^2.0.0",
     "spectacle-code-slide": "0.4.0"
   },
@@ -48,10 +50,10 @@
     "is-buffer": "^1.1.1",
     "markdown-loader": "^0.1.7",
     "node-libs-browser": "^0.5.3",
+    "raw-loader": "^0.5.1",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.2.0",
-    "raw-loader": "^0.5.1",
     "rimraf": "^2.4.4",
     "style-loader": "^0.13.0",
     "surge": "latest",
